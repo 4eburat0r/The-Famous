@@ -1,0 +1,34 @@
+@use "variables";
+
+@mixin flex-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin card-title ($spacing){
+  padding-top: $spacing;
+  padding-left: $spacing;
+}
+
+@mixin spacing-top-bottom ($spacing){
+  margin-top: $spacing;
+  margin-bottom: $spacing;
+}
+
+@mixin spacing-left-right ($spacing){
+  margin-left: $spacing;
+  margin-right: $spacing;
+}
+
+@mixin header_footer_wrapper {
+  @include flex-space-between();
+  min-width: variables.$min-width;
+  margin: 0 auto;
+}

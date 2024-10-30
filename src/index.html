@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet"> <!-- шрфит -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <script src="https://unpkg.com/htmx.org@1.9.4"></script>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <div class="header_wrapper">
+        <div class="logo_navbar">
+          <img src="/img/logo-header.svg" alt="логотип">
+          <nav>
+            <ul>
+              <li><a href="/">Каталог</a></li>
+              <li><a href="/">Доставка</a></li>
+              <li><a href="/">Оплата</a></li>
+              <li><a href="/">Контакты</a></li>
+              <li><a href="/">О галерее</a></li>
+            </ul>
+          </nav>
+        </div>
+        <form class="btnSearch">
+          <input type="search" placeholder="Поиск по названию картины">
+          <button type="submit">Найти</button>
+        </form>
+      </div>
+    </header>
+
+    <main>
+      <h1>Картины эпохи Возрождения</h1>
+      <div class="gallery">
+        <div class="card_with_sale">
+          <img src="/img/venera.png">
+          <div>
+              <h2>«Рождение Венеры» Сандро Боттичелли</h2>
+              <div class="area_price_buy">
+                <span class="price">
+                  <p class="sale">2 000 000 $</p>
+                  <p>1 000 000 $</p>
+                </span>
+                <button class="buyButton">Купить</button>
+                <div class="loader" style="display: none;"><p></p></div>
+              </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/img/vecherya.png">
+          <div>
+            <h2>«Тайная вечеря» Леонардо да Винчи</h2>
+            <div class="area_price_buy">
+              <span class="price">
+                <p>3 000 000 $</p>
+              </span>
+              <button class="buyButton">Купить</button>
+              <div class="loader" style="display: none;"><p></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="card_with_sale">
+          <img src="/img/adam.png">
+          <div>
+            <h2>«Сотворение Адама» Микеланджело</h2>
+            <div class="area_price_buy">
+              <span class="price">
+                <p class="sale">6 000 000 $</p>
+                <p>5 000 000 $</p>
+              </span>
+              <button class="buyButton">Купить</button>
+              <div class="loader" style="display: none;"><p></p></div>
+            </div>
+          </div>
+        </div>
+        <div class="purchased_card">
+          <img src="/img/anatomiya.png">
+          <div>
+            <h2>«Урок анатомии» Рембрандт</h2>
+            <div class="area_price_buy">
+              <h3>Продана на аукционе</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer_wrapper">
+        <div class="footer_logo_navbar">
+          <img src="/img/logo-footer.svg" alt="логотип">
+          <nav>
+            <ul>
+              <li><a href="/">Каталог</a></li>
+              <li><a href="/">Доставка</a></li>
+              <li><a href="/">Оплата</a></li>
+              <li><a href="/">Контакты</a></li>
+              <li><a href="/">О галерее</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="contacts">
+          <p><img src="/img/phone.svg">+7 (495) 555-55-55</p>
+          <p><img src="/img/addres.svg">г. Москва, ул. Расплетина, 24</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+
+
+</body>
+
+<script type="module" src="/js/main.min.js"></script>
+
+</html>

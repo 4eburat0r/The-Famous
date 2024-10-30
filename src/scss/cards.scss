@@ -1,0 +1,78 @@
+@use "mixins";
+@use "variables";
+
+.card {
+  background-color: variables.$primary-color;
+  width: 280px;
+  height: 328px;
+  border: variables.$border-cards;
+
+  img {
+    height: 168px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: variables.$text-color;
+    line-height: 25px;
+    max-width: 280px;
+    @include mixins.spacing-left-right(20px);
+    @include mixins.spacing-top-bottom(20px);
+  }
+
+  .price {
+    p {
+      margin-right: 30px;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 24px;
+    }
+  }
+
+  .area_price_buy {
+    @include mixins.flex-center();
+    @include mixins.spacing-top-bottom(20px);
+  }
+
+  button {
+    background-color:#382E2B;
+    color: white;
+    height: 48px;
+    width: 118px;
+    border: none;
+    font-family: variables.$fonts;
+    &:hover{
+      background-color: #776763;
+      
+    }
+  }
+}
+
+.purchased_card {
+  @extend .card;
+  opacity: 0.5;
+
+  h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #343030;
+    width: 100%;
+    @include mixins.spacing-top-bottom(20px);
+    @include mixins.spacing-left-right(20px);
+  }
+}
+
+.card_with_sale {
+  @extend .card;
+
+  .price .sale {
+    text-decoration: line-through;
+    color: #A0A0A0;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 21px;
+  }
+}

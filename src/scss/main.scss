@@ -1,0 +1,124 @@
+@use "variables.scss";
+@use "mixins.scss";
+@use "cards.scss";
+@use "logo_navbar.scss";
+@use "search_form.scss";
+@use "null.scss";
+
+html {
+     height: 100%;
+}
+
+body {
+     margin: 0;
+     min-height: 100%;
+     display: grid;
+     font-family: variables.$fonts;
+     background-color: variables.$primary-color;
+}
+
+.wrapper {
+     min-width: variables.$min-width;
+     @include mixins.flex-center();
+}
+
+main {
+     height: 75%;
+     min-width: variables.$min-width;
+
+     h1 {
+          @include mixins.spacing-top-bottom(40px);
+          font-size: 24px;
+          font-weight: 700;
+          color: variables.$text-color;
+     }
+}
+
+header {
+     @include mixins.flex-space-between();
+     height: 100px;
+     border-bottom: 1px solid #e5e4e2;
+     background-color: variables.$primary-color;
+     width: 100%;
+     position: absolute;
+     top: 0;
+}
+
+.header_wrapper {
+     @include mixins.header_footer_wrapper();
+}
+
+footer {
+     color:  #555555;
+     background-color: #ECEAEA;
+     @include mixins.flex-space-between();
+     height: 100px;
+     width: 100%;
+     position: absolute;
+     bottom: 0;
+}
+
+.footer_wrapper {
+     @include mixins.header_footer_wrapper();
+}
+
+
+.gallery {
+     @include mixins.flex-space-between();
+}
+
+.contacts {
+     @include mixins.flex-space-between();
+     p {
+          margin-left: 40px;
+     }
+     img {
+          margin-right: 15px;
+     }
+}
+
+.buyButton.buy {
+     background-color: #403432;
+     &:hover {
+          background-color: #776763; /* Цвет при наведении */
+     } 
+}
+
+
+.buyButton.in-cart {
+     background-color: #5B3A32;
+     &:hover {
+          background-color: #776763; /* Цвет при наведении */
+     } 
+}
+
+
+.loader {
+     background-color:#C1B4B1;
+     color: white;
+     height: 48px;
+     width: 118px;
+     border: none;
+     p{
+          @include mixins.spacing-top-bottom(9px);
+          @include mixins.spacing-left-right(44px);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border-top: 3px solid #ffffff;
+          border-right: 3px solid transparent;
+          box-sizing: border-box;
+          animation: rotation 1s linear infinite;
+     }
+
+   }
+   
+   @keyframes rotation {
+     0% {
+       transform: rotate(0deg);
+     }
+     100% {
+       transform: rotate(360deg);
+     }
+}  
+

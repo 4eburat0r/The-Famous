@@ -1,0 +1,30 @@
+@use "variables";
+
+.btnSearch {
+  display: flex;
+
+  input {
+       font-family: variables.$fonts;
+       padding-left: 15px;
+       background-color: variables.$primary-color;
+       border: variables.$border-cards;
+       height: 48px;
+       width: 294px;
+  }
+
+  ::placeholder {
+       color: #9F9F9F;
+       font-weight: 400;
+       font-size: 14px;
+  }
+
+  button {
+       background-color: #403432;
+       color: white;
+       height: 48px;
+       width: 122px;
+       border: none;
+       font-family: variables.$fonts;
+       margin-left: -3px;
+  }
+}
