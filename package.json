@@ -28,5 +28,8 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "sass": "latest"
+  },
+  "dependencies": {
+    "htmx.org": "^1.9.12"
   }
 }

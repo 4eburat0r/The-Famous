@@ -49,7 +49,7 @@ header {
 }
 
 footer {
-     color:  #555555;
+     color: #555555;
      background-color: #ECEAEA;
      @include mixins.flex-space-between();
      height: 100px;
@@ -61,7 +61,6 @@ footer {
 .footer_wrapper {
      @include mixins.header_footer_wrapper();
 }
-
 
 .gallery {
      @include mixins.flex-space-between();
@@ -77,29 +76,29 @@ footer {
      }
 }
 
-.buyButton.buy {
+.buyButton {
      background-color: #403432;
-     &:hover {
-          background-color: #776763; /* Цвет при наведении */
-     } 
+     &.buy {
+          &:hover {
+               background-color: #776763;
+          }
+     }
+
+     &.in-cart {
+          background-color: #5B3A32;
+          &:hover {
+               background-color: #776763;
+          }
+     }
 }
-
-
-.buyButton.in-cart {
-     background-color: #5B3A32;
-     &:hover {
-          background-color: #776763; /* Цвет при наведении */
-     } 
-}
-
 
 .loader {
-     background-color:#C1B4B1;
+     background-color: #C1B4B1;
      color: white;
      height: 48px;
      width: 118px;
      border: none;
-     p{
+     p {
           @include mixins.spacing-top-bottom(9px);
           @include mixins.spacing-left-right(44px);
           width: 30px;
@@ -110,15 +109,14 @@ footer {
           box-sizing: border-box;
           animation: rotation 1s linear infinite;
      }
+}
 
-   }
-   
-   @keyframes rotation {
+@keyframes rotation {
      0% {
-       transform: rotate(0deg);
+          transform: rotate(0deg);
      }
-     100% {
-       transform: rotate(360deg);
-     }
-}  
 
+     100% {
+          transform: rotate(360deg);
+     }
+}
